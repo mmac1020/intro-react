@@ -1,6 +1,6 @@
 module.exports = {
   mode: 'development',
-  entry: './first-component.js',
+  entry: './props.js',
   output: {
     path: __dirname,
     filename: './bundle.js',

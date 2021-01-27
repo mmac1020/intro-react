@@ -1,6 +1,6 @@
 module.exports = {
   mode: 'development',
-  entry: './first-component.js',
+  entry: './state.js',
   output: {
     path: __dirname,
     filename: './bundle.js',
@@ -15,6 +15,7 @@ module.exports = {
           presets: ['@babel/preset-react'],
         },
       },
+      { test: /\.css$/, use: 'css-loader' },
     ],
   },
 };
