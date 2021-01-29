@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Topping from './components/Topping';
 
-// A Functional Component (woaaaaaaah)
+// A Class Component (woaaaaaaah)
 class ToppingsList extends React.Component {
   constructor() {
     super();
@@ -19,25 +19,23 @@ class ToppingsList extends React.Component {
   }
 
   render() {
-    const toppingIWant = this.state.selectedTopping;
     return (
       <div>
         <Topping
-          selectedTopping={toppingIWant}
+          selectedTopping={this.state.selectedTopping}
           topping='Cheese'
           selectTopping={this.selectTopping}
         />
         <Topping
-          selectedTopping={toppingIWant}
+          selectedTopping={this.state.selectedTopping}
           topping='Sausage'
           selectTopping={this.selectTopping}
         />
         <Topping
-          selectedTopping={toppingIWant}
+          selectedTopping={this.state.selectedTopping}
           topping='Pineapple'
           selectTopping={this.selectTopping}
         />
-        {/* <Anchovies /> */}
       </div>
     );
   }
