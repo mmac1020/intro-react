@@ -1,26 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Topping from './components/Topping';
+// This is fine
+// const Topping = (props) => {
 
+// }
 // A Class Component (woaaaaaaah)
 class ToppingsList extends React.Component {
   constructor() {
     super();
     this.state = {
+      parentClass: '',
       selectedTopping: 'Cheese',
     };
     this.selectTopping = this.selectTopping.bind(this);
   }
 
   selectTopping(topping) {
+    console.log(`I am selecting ${topping} as a topping`);
     this.setState({
       selectedTopping: topping,
     });
   }
 
   render() {
+    console.log('I am rendering now!');
     return (
-      <div>
+      <div className={this.state.parentClass}>
         <Topping
           selectedTopping={this.state.selectedTopping}
           topping='Cheese'
@@ -41,4 +47,7 @@ class ToppingsList extends React.Component {
   }
 }
 
-ReactDOM.render(<ToppingsList />, document.getElementById('app'));
+ReactDOM.render(
+  <ToppingsList addAProp='newProp' />,
+  document.getElementById('app')
+);

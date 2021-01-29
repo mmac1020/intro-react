@@ -9,13 +9,17 @@ import React from 'react';
 
 // functional component
 const Topping = (props) => {
-  console.log(props);
+  if (props.topping === 'Cheese') {
+    console.log(
+      'The Cheese functional component has been called again (to render)'
+    );
+  }
   let renderedClass = '';
   if (props.selectedTopping === props.topping) {
     renderedClass = 'selected';
   }
   return (
-    <div>
+    <div className='other-class'>
       <li className={renderedClass}>Here is your topping: {props.topping}</li>
       <button onClick={() => props.selectTopping(props.topping)}>
         Click me to change the selected topping
