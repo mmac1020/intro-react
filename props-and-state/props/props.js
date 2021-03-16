@@ -7,7 +7,12 @@ import Topping from './components/Topping';
 const ToppingsList = () => {
   return (
     <div>
-      <Topping topping='Cheese' quantity='10' crispy='yes' />
+      <Topping
+        topping='Cheese'
+        quantity='10'
+        crispy='yes'
+        delicious='definitely'
+      />
       <Topping topping='Sausage' />
       <Topping topping='Pineapple' />
       {/* <Anchovies /> */}

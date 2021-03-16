@@ -9,6 +9,14 @@ import React from 'react';
 
 // functional component
 const Topping = (props) => {
+  /**
+   * {
+   *  topping: 'Cheese',
+   *  quantity: '10',
+   *  crispy: 'yes',
+   *  delicious: 'definitely'
+   * }
+   */
   console.log(props);
   return (
     <li>
