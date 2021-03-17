@@ -1,6 +1,6 @@
 module.exports = {
   mode: 'development',
-  entry: './props.js',
+  entry: './ToppingsList.js',
   output: {
     path: __dirname,
     filename: './bundle.js',
